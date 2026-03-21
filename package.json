@@ -1,0 +1,23 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "projeto de ecommerce",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "prefix:sass": "postcss --use autoprefixer -b 'last 10 version' css/style.comp.css -o css/style.prefix.css",
+    "compress:sass": "sass css/style.prefix.css css/style.css --style compressed",
+    "build:sass": "npm-run-all compile:sass prefix:sass compress:sass"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.97.3"
+  }
+}
