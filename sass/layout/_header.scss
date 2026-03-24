@@ -1,3 +1,47 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.cabecalho {
+  @include flex($align: center, $just: space-between);
+  padding: 2.5rem 4.88rem;
+  background-color: $cor-branca;
+
+  &__container {
+    @include flex($align: end, $gap: 6.1rem);
+  }
+  &__logo {
+    width: 15rem;
+    margin-bottom: 3px;
+  }
+
+  &__lista {
+    @include flex($gap: 4.88rem);
+    list-style: none;
+  }
+
+  &__link {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    border-bottom: solid 2px transparent;
+    font-weight: 700;
+
+    &--ofertas {
+      color: $cor-vermelha;
+    }
+
+    &:hover,
+    &:active {
+      border-bottom-color: currentColor;
+    }
+  }
+
+  &__icones {
+    @include flex($align: center, $gap: 1.28rem);
+  }
+
+  &__icone {
+    width: 100%;
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+}
