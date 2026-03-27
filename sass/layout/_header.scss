@@ -2,10 +2,12 @@
   @include flex($align: center, $just: space-between);
   padding: 2.5rem 4.88rem;
   background-color: $cor-branca;
+  position: relative;
 
   &__container {
     @include flex($align: end, $gap: 6.1rem);
   }
+
   &__logo {
     width: 15rem;
     margin-bottom: 3px;
@@ -14,6 +16,10 @@
   &__lista {
     @include flex($gap: 4.88rem);
     list-style: none;
+
+    &--tipo {
+      @include flex($flow: column, $gap: 0.42rem);
+    }
   }
 
   &__link {
@@ -33,6 +39,46 @@
     &:active {
       border-bottom-color: currentColor;
     }
+
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    border-bottom: solid 2px transparent;
+    font-weight: 700;
+
+    &--ofertas {
+      color: $cor-vermelha;
+    }
+
+    &--tipo {
+      text-transform: none;
+      font-weight: 400;
+      color: $cor-cinza;
+
+      &:hover,
+      &:active {
+        border: none;
+      }
+    }
+
+    &:hover,
+    &:active {
+      border-bottom-color: currentColor;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
+
+  &__expansao-tipo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    height: 20rem;
+    @include flex($gap: 4.88rem);
+    background-color: $cor-branca;
   }
 
   &__icones {

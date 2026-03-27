@@ -13,7 +13,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.2;
   color: #000;
-  background-color: #000;
 }
 
 .cabecalho {
@@ -24,6 +23,7 @@ body {
   gap: 0;
   padding: 2.5rem 4.88rem;
   background-color: #fff;
+  position: relative;
 }
 .cabecalho__container {
   display: flex;
@@ -44,6 +44,13 @@ body {
   gap: 4.88rem;
   list-style: none;
 }
+.cabecalho__lista--tipo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.42rem;
+}
 .cabecalho__link {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -58,6 +65,44 @@ body {
 }
 .cabecalho__link:hover, .cabecalho__link:active {
   border-bottom-color: currentColor;
+}
+.cabecalho__link {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  border-bottom: solid 2px transparent;
+  font-weight: 700;
+}
+.cabecalho__link--ofertas {
+  color: red;
+}
+.cabecalho__link--tipo {
+  text-transform: none;
+  font-weight: 400;
+  color: #626262;
+}
+.cabecalho__link--tipo:hover, .cabecalho__link--tipo:active {
+  border: none;
+}
+.cabecalho__link:hover, .cabecalho__link:active {
+  border-bottom-color: currentColor;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.cabecalho__expansao-tipo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  height: 20rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 4.88rem;
+  background-color: #fff;
 }
 .cabecalho__icones {
   display: flex;
