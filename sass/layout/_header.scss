@@ -1,16 +1,20 @@
+@use "../abstracts/auxiliares" as *;
+
 .cabecalho {
   @include flex($align: center, $just: space-between);
-  padding: 2.5rem 4.88rem;
+  padding: 0 4.88rem;
   background-color: $cor-branca;
   position: relative;
+  z-index: 100;
 
   &__container {
-    @include flex($align: end, $gap: 6.1rem);
+    @include flex($align: center, $gap: 6.1rem);
   }
 
   &__logo {
     width: 15rem;
     margin-bottom: 3px;
+    cursor: pointer;
   }
 
   &__lista {
@@ -35,23 +39,6 @@
       color: $cor-vermelha;
     }
 
-    &:hover,
-    &:active {
-      border-bottom-color: currentColor;
-    }
-
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    line-height: 1;
-    border-bottom: solid 2px transparent;
-    font-weight: 700;
-
-    &--ofertas {
-      color: $cor-vermelha;
-    }
-
     &--tipo {
       text-transform: none;
       font-weight: 400;
@@ -60,25 +47,40 @@
       &:hover,
       &:active {
         border: none;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
       }
     }
 
     &:hover,
     &:active {
       border-bottom-color: currentColor;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
+    }
+  }
+
+  &__item-lista {
+    padding: 2.5rem 0;
+    &:hover {
+      & .cabecalho__expansao-tipo {
+        display: flex;
+      }
     }
   }
 
   &__expansao-tipo {
+    @include flex($gap: 4.88rem);
+    display: none;
     position: absolute;
     right: 0;
     left: 0;
     top: 100%;
-    height: 20rem;
-    @include flex($gap: 4.88rem);
+    padding: 3.12rem 4.88rem;
     background-color: $cor-branca;
+    box-shadow: 0 0 0.1rem rgba($cor-preto, 0.1);
+  }
+
+  &__img {
+    max-height: 35rem;
   }
 
   &__icones {

@@ -1,17 +1,17 @@
 @charset "UTF-8";
 
 // Auxiliares
-@import "abstracts/auxiliares";
+@use "abstracts/auxiliares";
 
-// Base stuff
-@import "base/base";
+// base
+@use "base/base";
 
-// Layout-related sections
-@import "layout/footer";
-@import "layout/header";
+// components
+@use "components/button";
 
-// Components
-// @use "components/button";
+// layoura
+@use "layout/footer";
+@use "layout/header";
 
-// Pages
-@import "pages/home";
+// pages
+@use "pages/home";
