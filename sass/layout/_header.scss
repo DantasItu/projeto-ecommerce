@@ -14,7 +14,6 @@
   &__logo {
     width: 15rem;
     margin-bottom: 3px;
-    cursor: pointer;
   }
 
   &__lista {
@@ -34,6 +33,32 @@
     line-height: 1;
     border-bottom: solid 2px transparent;
     font-weight: 700;
+
+    &-icone {
+      text-decoration: none;
+      color: inherit;
+      fill: inherit;
+      transition:
+        transform ease 200ms,
+        color ease 400ms,
+        fill ease 400ms;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $cor-vermelha;
+        fill: $cor-vermelha;
+      }
+
+      &--logado {
+        & .cabecalho__icone {
+          display: none;
+
+          &--logado {
+            display: block;
+          }
+        }
+      }
+    }
 
     &--ofertas {
       color: $cor-vermelha;
@@ -62,14 +87,20 @@
     padding: 2.5rem 0;
     &:hover {
       & .cabecalho__expansao-tipo {
-        display: flex;
+        // display: flex;
+
+        // efeito de slide
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
     }
   }
 
   &__expansao-tipo {
     @include flex($gap: 4.88rem);
-    display: none;
+    // display: none;
+
     position: absolute;
     right: 0;
     left: 0;
@@ -77,6 +108,13 @@
     padding: 3.12rem 4.88rem;
     background-color: $cor-branca;
     box-shadow: 0 0 0.1rem rgba($cor-preto, 0.1);
+
+    // Efeito de slide
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
   }
 
   &__img {
@@ -91,5 +129,12 @@
     width: 100%;
     max-width: 2rem;
     max-height: 2rem;
+    color: inherit;
+
+    &--logado {
+      display: none;
+      fill: transparent;
+      stroke: currentColor;
+    }
   }
 }

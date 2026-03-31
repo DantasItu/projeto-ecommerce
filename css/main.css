@@ -41,7 +41,6 @@ img {
 .cabecalho__logo {
   width: 15rem;
   margin-bottom: 3px;
-  cursor: pointer;
 }
 .cabecalho__lista {
   display: flex;
@@ -67,6 +66,23 @@ img {
   border-bottom: solid 2px transparent;
   font-weight: 700;
 }
+.cabecalho__link-icone {
+  text-decoration: none;
+  color: inherit;
+  fill: inherit;
+  transition: transform ease 200ms, color ease 400ms, fill ease 400ms;
+}
+.cabecalho__link-icone:hover {
+  transform: scale(1.1);
+  color: red;
+  fill: red;
+}
+.cabecalho__link-icone--logado .cabecalho__icone {
+  display: none;
+}
+.cabecalho__link-icone--logado .cabecalho__icone--logado {
+  display: block;
+}
 .cabecalho__link--ofertas {
   color: red;
 }
@@ -87,7 +103,9 @@ img {
   padding: 2.5rem 0;
 }
 .cabecalho__item-lista:hover .cabecalho__expansao-tipo {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .cabecalho__expansao-tipo {
   display: flex;
@@ -95,7 +113,6 @@ img {
   align-items: stretch;
   justify-content: start;
   gap: 4.88rem;
-  display: none;
   position: absolute;
   right: 0;
   left: 0;
@@ -103,6 +120,11 @@ img {
   padding: 3.12rem 4.88rem;
   background-color: #fff;
   box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
 }
 .cabecalho__img {
   max-height: 35rem;
@@ -118,6 +140,12 @@ img {
   width: 100%;
   max-width: 2rem;
   max-height: 2rem;
+  color: inherit;
+}
+.cabecalho__icone--logado {
+  display: none;
+  fill: transparent;
+  stroke: currentColor;
 }
 
 /*# sourceMappingURL=main.css.map */
