@@ -81,6 +81,12 @@
     &:active {
       border-bottom-color: currentColor;
     }
+
+    &--perfil {
+      text-transform: none;
+      font-weight: 400;
+      border-bottom: none;
+    }
   }
 
   &__item-lista {
@@ -135,6 +141,85 @@
       display: none;
       fill: transparent;
       stroke: currentColor;
+    }
+
+    &--menor {
+      width: 1.6rem;
+    }
+  }
+
+  &__icone-carrinho {
+    position: relative;
+  }
+
+  &__itens {
+    @include flex($align: center, $just: center);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(55%, -55%);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: $cor-vermelha;
+    font-size: 1.11rem;
+    color: $cor-branca;
+
+    &--visivel {
+      display: flex;
+    }
+  }
+
+  &__icone-login {
+    position: relative;
+  }
+
+  &__informacoes-perfil {
+    @include flex($flow: column, $gap: 1.28rem);
+    display: none;
+    position: absolute;
+    width: max-content;
+    right: 0;
+    top: 100%;
+    transform: translatey(5%);
+    padding: 3.12rem 2rem;
+    background-color: $cor-branca;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba($color: $cor-preto, $alpha: 0.8);
+
+    &--aberto {
+      display: flex;
+    }
+
+    // fazer triangulo de balão
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-15%, -100%);
+      border: solid 1rem transparent;
+      border-bottom-color: rgba($color: $cor-preto, $alpha: 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-15%, -98%);
+      border: solid 1rem transparent;
+      border-bottom-color: $cor-branca;
+    }
+  }
+
+  &__texto {
+    font-size: 1.33;
+
+    span {
+      font-weight: 700;
     }
   }
 }

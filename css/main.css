@@ -99,6 +99,11 @@ img {
 .cabecalho__link:hover, .cabecalho__link:active {
   border-bottom-color: currentColor;
 }
+.cabecalho__link--perfil {
+  text-transform: none;
+  font-weight: 400;
+  border-bottom: none;
+}
 .cabecalho__item-lista {
   padding: 2.5rem 0;
 }
@@ -146,6 +151,80 @@ img {
   display: none;
   fill: transparent;
   stroke: currentColor;
+}
+.cabecalho__icone--menor {
+  width: 1.6rem;
+}
+.cabecalho__icone-carrinho {
+  position: relative;
+}
+.cabecalho__itens {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(55%, -55%);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+  font-size: 1.11rem;
+  color: #fff;
+}
+.cabecalho__itens--visivel {
+  display: flex;
+}
+.cabecalho__icone-login {
+  position: relative;
+}
+.cabecalho__informacoes-perfil {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.28rem;
+  display: none;
+  position: absolute;
+  width: max-content;
+  right: 0;
+  top: 100%;
+  transform: translatey(5%);
+  padding: 3.12rem 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.8);
+}
+.cabecalho__informacoes-perfil--aberto {
+  display: flex;
+}
+.cabecalho__informacoes-perfil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-15%, -100%);
+  border: solid 1rem transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+.cabecalho__informacoes-perfil::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-15%, -98%);
+  border: solid 1rem transparent;
+  border-bottom-color: #fff;
+}
+.cabecalho__texto {
+  font-size: 1.33;
+}
+.cabecalho__texto span {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */
