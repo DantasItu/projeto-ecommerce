@@ -341,7 +341,8 @@
         <div class="cabecalho__icones">
             <!-- incone perfil -->
             <div class="cabecalho__icone-login">
-                <a class="cabecalho__link-icone cabecalho__link-icone--logado" href="login.html">
+                <!-- cabecalho__link-icone--logado para mudar o incone para logado -->
+                <a class="cabecalho__link-icone" href="login.html">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" class="cabecalho__icone">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M8 1.333a3.332 3.332 0 100 6.662 3.332 3.332 0 100-6.662zM3.334 4.664A4.665 4.665 0 018 0a4.665 4.665 0 110 9.328 4.665 4.665 0 01-4.666-4.664zm2 8.662A3.333 3.333 0 002 16.657v1.996h12v-1.996a3.333 3.333 0 00-3.333-3.333H5.334zM.667 16.657a4.666 4.666 0 014.667-4.666h5.333a4.666 4.666 0 014.667 4.666v3.33H.667v-3.33z"
@@ -355,13 +356,15 @@
                     </svg>
                 </a>
 
-                <div class="cabecalho__informacoes-perfil cabecalho__informacoes-perfil--aberto">
+                <!-- para exibir o perfil cabecalho__informacoes-perfil--aberto -->
+                <div class="cabecalho__informacoes-perfil">
                     <p class="cabecalho__texto">Olá, <span>João!</span></p>
                     <a class="cabecalho__link cabecalho__link--perfil" href="minha-conta.html">Minha Conta</a>
                     <a class="cabecalho__link cabecalho__link--perfil" href="meus-pedidos.html">Meus Pedidos</a>
                     <hr>
                     <a class="cabecalho__link cabecalho__link--perfil" href="">Sair</a>
                 </div>
+
 
             </div>
             <!-- incone carrinho -->
@@ -380,12 +383,39 @@
                 <div class="cabecalho__itens cabecalho__itens--visivel">2</div>
             </div>
 
-
         </div>
     </header>
-    <main>
-    </main>
 
+    <main>
+        <section>
+            <div class="carrossel">
+                <div class="carrossel__botoes">
+                    <div class="carrossel__botao">
+                        <div class="carrossel__preenchimento"></div>
+                    </div>
+                    <div class="carrossel__botao">
+                        <div class="carrossel__preenchimento"></div>
+                    </div>
+                </div>
+                <div class="carrossel__imagens">
+                    <div class="carrossel__item">
+                        <a href="#f">
+                            <img src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/081bf7e6-606a-4631-a726-f6bc0412dbfb___3221b0bbc02ef8712c86e7a3e1a00d8d.jpg"
+                                alt="imagem-1">
+                        </a>
+                    </div>
+                    <div class="carrossel__item">
+                        <a href="#">
+                            <img src="https://lojausereserva.vtexassets.com/assets/vtex.file-manager-graphql/images/6b0e9f52-670b-4542-ba5d-533fbb5d31d6___1c0cdc941121cd33eca5309aa9059bc0.jpg"
+                                alt="imagem-2">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
