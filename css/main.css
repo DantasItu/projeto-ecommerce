@@ -6,6 +6,8 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-color: #a7a7a7 transparent;
+  scrollbar-width: thin;
 }
 
 body {
@@ -13,13 +15,21 @@ body {
   font-size: 1.6rem;
   line-height: 1.2;
   color: #000;
-  background-color: #000;
+  background-color: #fff;
 }
 
 img {
   width: 100%;
   max-width: 100%;
   display: block;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2.5rem;
 }
 
 .carrossel {
@@ -67,6 +77,49 @@ img {
 .carrossel__preenchimento--completo {
   width: 100%;
   transition: width ease-out 5s;
+}
+
+.formulario {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.02rem;
+}
+.formulario__input {
+  font-family: inherit;
+  padding: 1rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 0.8rem;
+}
+.formulario__botao {
+  padding: 1.4rem 3rem;
+  border-radius: 0.8rem;
+  background-color: #1b1b1b;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  border: none;
+}
+
+.rodape {
+  font-size: 1.33rem;
+}
+.rodape__logo {
+  width: 1.8rem;
+  height: 2.3rem;
+}
+.rodape__texto-newsletter {
+  font-size: 3.12rem;
+  font-weight: 700;
+  font-family: serif;
+}
+.rodape__newsletter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
 }
 
 .cabecalho {
@@ -280,10 +333,9 @@ img {
 
 .banner-grid {
   display: grid;
-  background-color: #fff;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding: 2.5rem 1rem;
+  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

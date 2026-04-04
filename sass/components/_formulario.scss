@@ -1,0 +1,22 @@
+@use "../abstracts/auxiliares" as *;
+
+.formulario {
+  @include flex($gap: 1.02rem);
+
+  &__input {
+    font-family: inherit;
+    padding: 1rem;
+    border: 1px solid $cor-cinza-mias-claro;
+    border-radius: 0.8rem;
+  }
+
+  &__botao {
+    padding: 1.4rem 3rem;
+    border-radius: 0.8rem;
+    background-color: $cor-preto-2;
+    color: $cor-branca;
+    text-transform: uppercase;
+    line-height: 1;
+    border: none;
+  }
+}

@@ -8,6 +8,8 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-color: $cor-cinza-claro transparent;
+  scrollbar-width: thin;
 }
 
 body {
@@ -15,11 +17,15 @@ body {
   font-size: 1.6rem;
   line-height: 1.2;
   color: $cor-preto;
-  background-color: $cor-preto;
+  background-color: $cor-branca;
 }
 
 img {
   width: 100%;
   max-width: 100%;
   display: block;
+}
+
+section {
+  @include flex($flow: column, $gap: 2.5rem);
 }
