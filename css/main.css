@@ -19,6 +19,7 @@ body {
 img {
   width: 100%;
   max-width: 100%;
+  display: block;
 }
 
 .carrossel {
@@ -76,8 +77,10 @@ img {
   gap: 0;
   padding: 0 4.88rem;
   background-color: #fff;
-  position: relative;
-  z-index: 100;
+  position: sticky;
+  position: -webkit-sticky; /* Suporte para Safari */
+  top: 0;
+  z-index: 999;
 }
 .cabecalho__container {
   display: flex;
@@ -273,6 +276,14 @@ img {
 }
 .cabecalho__texto span {
   font-weight: 700;
+}
+
+.banner-grid {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2.5rem 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

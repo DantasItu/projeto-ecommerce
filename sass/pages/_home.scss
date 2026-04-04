@@ -1,0 +1,9 @@
+@use "../abstracts/auxiliares" as *;
+
+.banner-grid {
+  display: grid;
+  background-color: $cor-branca;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2.5rem 1rem;
+}
