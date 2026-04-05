@@ -85,12 +85,14 @@ section {
   align-items: stretch;
   justify-content: start;
   gap: 1.02rem;
+  width: 100%;
 }
 .formulario__input {
   font-family: inherit;
   padding: 1rem;
   border: 1px solid #b0b0b0;
   border-radius: 0.8rem;
+  width: 100%;
 }
 .formulario__botao {
   padding: 1.4rem 3rem;
@@ -104,22 +106,54 @@ section {
 
 .rodape {
   font-size: 1.33rem;
+  padding-top: 2.5rem;
+}
+.rodape__newsletter--fundo-branco-escuro {
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+.rodape__app-nwesletter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7.63rem;
+  max-width: 136rem;
+  margin: 0 auto;
 }
 .rodape__logo {
-  width: 1.8rem;
+  min-width: 1.8rem;
   height: 2.3rem;
 }
 .rodape__texto-newsletter {
   font-size: 3.12rem;
   font-weight: 700;
   font-family: serif;
+  text-wrap: nowrap;
+  line-height: 1;
 }
-.rodape__newsletter {
+.rodape__newsletter, .rodape__app {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: start;
   gap: 1rem;
+}
+.rodape__container-app {
+  max-width: 50rem;
+}
+.rodape__container-newsletter {
+  max-width: 50%;
+}
+.rodape__container-app, .rodape__container-newsletter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.rodape__img-lojas {
+  max-height: 4.2rem;
 }
 
 .cabecalho {

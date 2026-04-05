@@ -2,8 +2,21 @@
 
 .rodape {
   font-size: 1.33rem;
+  padding-top: 2.5rem;
+
+  &__newsletter--fundo-branco-escuro {
+    background-color: $cor-branco-escuro;
+    padding: 2rem;
+  }
+
+  &__app-nwesletter {
+    @include flex($gap: 7.63rem, $align: center, $just: space-between);
+    max-width: 136rem;
+    margin: 0 auto;
+  }
+
   &__logo {
-    width: 1.8rem;
+    min-width: 1.8rem;
     height: 2.3rem;
   }
 
@@ -11,9 +24,29 @@
     font-size: 3.12rem;
     font-weight: 700;
     font-family: serif;
+    text-wrap: nowrap;
+    line-height: 1;
   }
 
-  &__newsletter {
+  &__newsletter,
+  &__app {
     @include flex($gap: 1rem, $align: center);
+  }
+
+  &__container {
+    &-app {
+      max-width: 50rem;
+    }
+    &-newsletter {
+      max-width: 50%;
+    }
+    &-app,
+    &-newsletter {
+      @include flex($flow: column, $gap: 1.6rem);
+    }
+  }
+
+  &__img-lojas {
+    max-height: 4.2rem;
   }
 }
