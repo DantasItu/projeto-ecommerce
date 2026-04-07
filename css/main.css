@@ -155,6 +155,46 @@ section {
 .rodape__img-lojas {
   max-height: 4.2rem;
 }
+.rodape__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 3rem;
+  width: 136.6rem;
+  margin: 0 auto;
+}
+.rodape__informacoes {
+  padding: 2rem;
+}
+.rodape__informacao {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.rodape__links {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+  color: #585858;
+  list-style: none;
+}
+.rodape__links a {
+  text-decoration: none;
+  color: inherit;
+}
+.rodape__links a:hover {
+  text-decoration: underline;
+}
+.rodape__titulos-informacao {
+  font-family: serif;
+  font-size: 1.92rem;
+  font-weight: 700;
+}
 
 .cabecalho {
   display: flex;
