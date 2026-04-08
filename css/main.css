@@ -159,12 +159,21 @@ section {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
-  justify-content: start;
-  gap: 3rem;
+  justify-content: space-between;
+  gap: 1.6rem;
   width: 136.6rem;
   margin: 0 auto;
 }
 .rodape__informacoes {
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+.rodape__secao-informacoes {
   padding: 2rem;
 }
 .rodape__informacao {
@@ -190,10 +199,68 @@ section {
 .rodape__links a:hover {
   text-decoration: underline;
 }
-.rodape__titulos-informacao {
+.rodape__titulo {
   font-family: serif;
   font-size: 1.92rem;
   font-weight: 700;
+}
+.rodape__ancora-icone {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  text-decoration-thickness: 1px;
+  color: inherit;
+  width: 50%;
+}
+.rodape__atendimento {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 46.4rem;
+}
+.rodape__ancoras {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.rodape__icone {
+  width: 2rem;
+}
+.rodape__whatsapp {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.8rem;
+}
+.rodape__whatsapp .rodape__ancora-icone {
+  width: 100%;
+}
+.rodape__horarios {
+  font-size: 1.11rem;
+}
+.rodape__redes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.rodape__rede {
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+.rodape__rede:hover {
+  opacity: 1;
+  filter: none;
 }
 
 .cabecalho {

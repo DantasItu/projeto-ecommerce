@@ -51,12 +51,18 @@
   }
 
   &__container {
-    @include flex($gap: 3rem);
+    @include flex($gap: 1.6rem, $just: space-between);
     width: 136.6rem;
     margin: 0 auto;
   }
 
   &__informacoes {
+    max-width: 60%;
+    width: 100%;
+    @include flex($gap: 1.6rem, $just: space-between);
+  }
+
+  &__secao-informacoes {
     padding: 2rem;
   }
 
@@ -78,9 +84,56 @@
     }
   }
 
-  &__titulos-informacao {
+  &__titulo {
     font-family: serif;
     font-size: 1.92rem;
     font-weight: 700;
+  }
+
+  &__ancora-icone {
+    @include flex($gap: 1rem, $align: center);
+    text-decoration-thickness: 1px;
+    color: inherit;
+    width: 50%;
+  }
+
+  &__atendimento {
+    @include flex($flow: column, $gap: 1.6rem);
+    width: 100%;
+    max-width: 46.4rem;
+  }
+  &__ancoras {
+    @include flex($just: space-between, $gap: 1rem, $wrap: wrap, $align: start);
+  }
+
+  &__icone {
+    width: 2rem;
+  }
+
+  &__whatsapp {
+    @include flex($flow: column, $gap: 0.8rem);
+
+    & .rodape__ancora-icone {
+      width: 100%;
+    }
+  }
+
+  &__horarios {
+    font-size: 1.11rem;
+  }
+
+  &__redes {
+    @include flex($gap: 1rem, $just: space-evenly);
+    margin-top: 2rem;
+  }
+
+  &__rede {
+    opacity: 0.6;
+    filter: grayscale(1);
+
+    &:hover {
+      opacity: 1;
+      filter: none;
+    }
   }
 }
