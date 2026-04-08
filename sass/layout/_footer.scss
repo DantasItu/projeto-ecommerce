@@ -34,6 +34,11 @@
   }
 
   &__container {
+    @include flex($gap: 1.6rem, $just: space-between);
+    max-width: 136rem;
+    width: 100%;
+    margin: 0 auto;
+
     &-app {
       max-width: 50rem;
     }
@@ -51,9 +56,6 @@
   }
 
   &__container {
-    @include flex($gap: 1.6rem, $just: space-between);
-    width: 136.6rem;
-    margin: 0 auto;
   }
 
   &__informacoes {

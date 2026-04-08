@@ -139,6 +139,16 @@ section {
   justify-content: start;
   gap: 1rem;
 }
+.rodape__container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.6rem;
+  max-width: 136rem;
+  width: 100%;
+  margin: 0 auto;
+}
 .rodape__container-app {
   max-width: 50rem;
 }
@@ -154,15 +164,6 @@ section {
 }
 .rodape__img-lojas {
   max-height: 4.2rem;
-}
-.rodape__container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 1.6rem;
-  width: 136.6rem;
-  margin: 0 auto;
 }
 .rodape__informacoes {
   max-width: 60%;
