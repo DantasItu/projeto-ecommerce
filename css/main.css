@@ -110,7 +110,7 @@ section {
 }
 .rodape__newsletter--fundo-branco-escuro {
   background-color: #f9f9f9;
-  padding: 2rem;
+  padding: 3.12rem 2rem;
 }
 .rodape__app-nwesletter {
   display: flex;
@@ -175,7 +175,7 @@ section {
   gap: 1.6rem;
 }
 .rodape__secao-informacoes {
-  padding: 2rem;
+  padding: 3.12rem 2rem;
 }
 .rodape__informacao {
   display: flex;
@@ -262,6 +262,75 @@ section {
 .rodape__rede:hover {
   opacity: 1;
   filter: none;
+}
+.rodape__diferenciais {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  margin: 6.1rem auto;
+}
+.rodape__diferencial {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+  opacity: 0.5;
+  max-width: 25rem;
+  text-align: center;
+}
+.rodape__diferencial-img {
+  max-height: 5rem;
+  width: auto;
+}
+.rodape__diferencial-titulo {
+  font-size: 1.92rem;
+  font-weight: 700;
+}
+.rodape__certificacoes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 100%;
+}
+.rodape__certificacao {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1rem;
+}
+.rodape__certificacao-titulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.rodape__certificacao-titulo--centralizado {
+  text-align: center;
+}
+.rodape__certificados {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.rodape__certificado--opacidade {
+  opacity: 0.5;
+}
+.rodape__certificado--opacidade:hover {
+  opacity: 1;
+}
+.rodape__secao-empresa {
+  text-align: center;
+  background-color: #f0f0f0;
+  font-size: 1.11rem;
+  opacity: 0.5;
+  padding: 1.28rem;
+  width: 100%;
 }
 
 .cabecalho {

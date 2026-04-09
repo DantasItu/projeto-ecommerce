@@ -6,7 +6,7 @@
 
   &__newsletter--fundo-branco-escuro {
     background-color: $cor-branco-escuro;
-    padding: 2rem;
+    padding: 3.12rem 2rem;
   }
 
   &__app-nwesletter {
@@ -55,9 +55,6 @@
     max-height: 4.2rem;
   }
 
-  &__container {
-  }
-
   &__informacoes {
     max-width: 60%;
     width: 100%;
@@ -65,7 +62,7 @@
   }
 
   &__secao-informacoes {
-    padding: 2rem;
+    padding: 3.12rem 2rem;
   }
 
   &__informacao {
@@ -137,5 +134,65 @@
       opacity: 1;
       filter: none;
     }
+  }
+
+  &__diferenciais {
+    @include flex($align: center, $gap: 2rem);
+    margin: 6.1rem auto;
+  }
+
+  &__diferencial {
+    @include flex($flow: column, $align: center, $gap: 1.6rem);
+    opacity: 0.5;
+    max-width: 25rem;
+    text-align: center;
+
+    &-img {
+      max-height: 5rem;
+      width: auto;
+    }
+    &-titulo {
+      font-size: 1.92rem;
+      font-weight: 700;
+    }
+  }
+
+  &__certificacoes {
+    @include flex($just: space-between, $gap: 2rem);
+    max-width: 100%;
+  }
+
+  &__certificacao {
+    @include flex($gap: 1rem, $flow: column);
+    &-titulo {
+      font-size: 1.6rem;
+      font-weight: 700;
+
+      &--centralizado {
+        text-align: center;
+      }
+    }
+  }
+
+  &__certificados {
+    @include flex($gap: 1.6rem, $align: center);
+  }
+
+  &__certificado {
+    &--opacidade {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__secao-empresa {
+    text-align: center;
+    background-color: $cor-branco-mais-escuro;
+    font-size: 1.11rem;
+    opacity: 0.5;
+    padding: 1.28rem;
+    width: 100%;
   }
 }
