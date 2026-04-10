@@ -20,5 +20,9 @@
     text-transform: uppercase;
     line-height: 1;
     border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

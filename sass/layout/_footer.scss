@@ -10,9 +10,12 @@
   }
 
   &__app-nwesletter {
-    @include flex($gap: 7.63rem, $align: center, $just: space-between);
-    max-width: 136rem;
+    @include flex($gap: 4.88rem, $align: center, $just: space-between);
+    max-width: 136.6rem;
     margin: 0 auto;
+    @include respond(big) {
+      gap: 3.12rem;
+    }
   }
 
   &__logo {
@@ -35,15 +38,23 @@
 
   &__container {
     @include flex($gap: 1.6rem, $just: space-between);
-    max-width: 136rem;
+    max-width: 136.6rem;
     width: 100%;
     margin: 0 auto;
 
     &-app {
       max-width: 50rem;
+
+      @include respond(big) {
+        width: 38rem;
+      }
     }
     &-newsletter {
       max-width: 50%;
+
+      @include respond(big) {
+        max-width: 100%;
+      }
     }
     &-app,
     &-newsletter {
@@ -100,6 +111,10 @@
     @include flex($flow: column, $gap: 1.6rem);
     width: 100%;
     max-width: 46.4rem;
+
+    @include respond(big) {
+      max-width: 35rem;
+    }
   }
   &__ancoras {
     @include flex($just: space-between, $gap: 1rem, $wrap: wrap, $align: start);

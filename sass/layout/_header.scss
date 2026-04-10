@@ -1,29 +1,82 @@
 @use "../abstracts/auxiliares" as *;
 
 .cabecalho {
-  @include flex($align: center, $just: space-between);
+  position: sticky;
+  top: 0;
+  @include flex($align: center, $just: space-between, $gap: 1.6rem);
   padding: 0 4.88rem;
   background-color: $cor-branca;
-  position: sticky;
-  position: -webkit-sticky; /* Suporte para Safari */
-  top: 0;
   z-index: 999;
 
+  @include respond(medium) {
+    padding: 0 3.12rem;
+  }
+
+  &--aberto {
+    & .cabecalho__menu {
+      &-icone {
+        display: none;
+      }
+
+      &-x {
+        display: block;
+      }
+    }
+  }
+
   &__container {
-    @include flex($align: center, $gap: 6.1rem);
+    @include flex($align: center, $just: space-between, $gap: 1.6rem);
+    width: 100%;
+
+    @include respond(medium) {
+      width: auto;
+    }
+  }
+
+  &__menu {
+    display: none;
+    width: 2.2rem;
+    cursor: pointer;
+
+    &-x {
+      display: none;
+      font-size: 2.4rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    @include respond(medium) {
+      display: block;
+    }
   }
 
   &__logo {
+    min-width: 15rem;
     width: 15rem;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+
+    @include respond(medium) {
+      margin: 2.33rem 0;
+    }
+  }
+
+  &__navegacao {
+    @include flex($gap: 4.88rem);
+    width: 100%;
+    max-width: 81rem;
+    @include respond(medium) {
+      display: none;
+    }
   }
 
   &__lista {
-    @include flex($gap: 4.88rem);
+    @include flex($just: space-between, $gap: 1.6rem);
     list-style: none;
+    width: 100%;
 
     &--tipo {
       @include flex($flow: column, $gap: 0.42rem);
+      width: auto;
     }
   }
 
@@ -127,6 +180,9 @@
 
   &__img {
     max-height: 35rem;
+    @include respond(medium) {
+      max-height: 30rem;
+    }
   }
 
   &__icones {
@@ -134,10 +190,19 @@
   }
 
   &__icone {
-    width: 100%;
-    max-width: 2rem;
-    max-height: 2rem;
+    width: 2rem;
+    height: 2rem;
     color: inherit;
+
+    @include respond(big) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    @include respond(medium) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
 
     &--logado {
       display: none;
@@ -147,6 +212,14 @@
 
     &--menor {
       width: 1.6rem;
+
+      @include respond(big) {
+        width: 1.78rem;
+      }
+
+      @include respond(medium) {
+        width: 1.8rem;
+      }
     }
   }
 

@@ -1,3 +1,5 @@
+// script carrocell home
+
 var elemsCarrosselBotao = document.querySelectorAll(".carrossel__botao");
 var elemCarrosselImagens = document.querySelector(".carrossel__imagens");
 
@@ -32,3 +34,11 @@ function rodarCarrocell(i) {
 setTimeout(function () {
   rodarCarrocell(0);
 }, 1000);
+
+// script fechar e abrir menu
+var elemCabecalhoMenu = document.querySelector(".cabecalho__menu");
+var elemCabecalho = document.querySelector(".cabecalho");
+
+elemCabecalhoMenu.addEventListener("click", function () {
+  elemCabecalho.classList.toggle("cabecalho--aberto");
+});

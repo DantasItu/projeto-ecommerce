@@ -9,6 +9,11 @@ html {
   scrollbar-color: #a7a7a7 transparent;
   scrollbar-width: thin;
 }
+@media (max-width: 80em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -103,6 +108,9 @@ section {
   line-height: 1;
   border: none;
 }
+.formulario__botao:hover {
+  cursor: pointer;
+}
 
 .rodape {
   font-size: 1.33rem;
@@ -117,9 +125,14 @@ section {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 7.63rem;
-  max-width: 136rem;
+  gap: 4.88rem;
+  max-width: 136.6rem;
   margin: 0 auto;
+}
+@media (max-width: 80em) {
+  .rodape__app-nwesletter {
+    gap: 3.12rem;
+  }
 }
 .rodape__logo {
   min-width: 1.8rem;
@@ -145,15 +158,25 @@ section {
   align-items: stretch;
   justify-content: space-between;
   gap: 1.6rem;
-  max-width: 136rem;
+  max-width: 136.6rem;
   width: 100%;
   margin: 0 auto;
 }
 .rodape__container-app {
   max-width: 50rem;
 }
+@media (max-width: 80em) {
+  .rodape__container-app {
+    width: 38rem;
+  }
+}
 .rodape__container-newsletter {
   max-width: 50%;
+}
+@media (max-width: 80em) {
+  .rodape__container-newsletter {
+    max-width: 100%;
+  }
 }
 .rodape__container-app, .rodape__container-newsletter {
   display: flex;
@@ -223,6 +246,11 @@ section {
   gap: 1.6rem;
   width: 100%;
   max-width: 46.4rem;
+}
+@media (max-width: 80em) {
+  .rodape__atendimento {
+    max-width: 35rem;
+  }
 }
 .rodape__ancoras {
   display: flex;
@@ -334,36 +362,89 @@ section {
 }
 
 .cabecalho {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0;
+  gap: 1.6rem;
   padding: 0 4.88rem;
   background-color: #fff;
-  position: sticky;
-  position: -webkit-sticky; /* Suporte para Safari */
-  top: 0;
   z-index: 999;
+}
+@media (max-width: 59.375em) {
+  .cabecalho {
+    padding: 0 3.12rem;
+  }
+}
+.cabecalho--aberto .cabecalho__menu-icone {
+  display: none;
+}
+.cabecalho--aberto .cabecalho__menu-x {
+  display: block;
 }
 .cabecalho__container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: start;
-  gap: 6.1rem;
+  justify-content: space-between;
+  gap: 1.6rem;
+  width: 100%;
+}
+@media (max-width: 59.375em) {
+  .cabecalho__container {
+    width: auto;
+  }
+}
+.cabecalho__menu {
+  display: none;
+  width: 2.2rem;
+  cursor: pointer;
+}
+.cabecalho__menu-x {
+  display: none;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 59.375em) {
+  .cabecalho__menu {
+    display: block;
+  }
 }
 .cabecalho__logo {
+  min-width: 15rem;
   width: 15rem;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
-.cabecalho__lista {
+@media (max-width: 59.375em) {
+  .cabecalho__logo {
+    margin: 2.33rem 0;
+  }
+}
+.cabecalho__navegacao {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
   justify-content: start;
   gap: 4.88rem;
+  width: 100%;
+  max-width: 81rem;
+}
+@media (max-width: 59.375em) {
+  .cabecalho__navegacao {
+    display: none;
+  }
+}
+.cabecalho__lista {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.6rem;
   list-style: none;
+  width: 100%;
 }
 .cabecalho__lista--tipo {
   display: flex;
@@ -371,6 +452,7 @@ section {
   align-items: stretch;
   justify-content: start;
   gap: 0.42rem;
+  width: auto;
 }
 .cabecalho__link {
   font-size: 1.3rem;
@@ -449,6 +531,11 @@ section {
 .cabecalho__img {
   max-height: 35rem;
 }
+@media (max-width: 59.375em) {
+  .cabecalho__img {
+    max-height: 30rem;
+  }
+}
 .cabecalho__icones {
   display: flex;
   flex-flow: row nowrap;
@@ -457,10 +544,21 @@ section {
   gap: 1.28rem;
 }
 .cabecalho__icone {
-  width: 100%;
-  max-width: 2rem;
-  max-height: 2rem;
+  width: 2rem;
+  height: 2rem;
   color: inherit;
+}
+@media (max-width: 80em) {
+  .cabecalho__icone {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+@media (max-width: 59.375em) {
+  .cabecalho__icone {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 .cabecalho__icone--logado {
   display: none;
@@ -469,6 +567,16 @@ section {
 }
 .cabecalho__icone--menor {
   width: 1.6rem;
+}
+@media (max-width: 80em) {
+  .cabecalho__icone--menor {
+    width: 1.78rem;
+  }
+}
+@media (max-width: 59.375em) {
+  .cabecalho__icone--menor {
+    width: 1.8rem;
+  }
 }
 .cabecalho__icone-carrinho {
   position: relative;
