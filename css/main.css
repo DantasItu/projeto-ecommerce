@@ -376,6 +376,7 @@ section {
 @media (max-width: 59.375em) {
   .cabecalho {
     padding: 0 3.12rem;
+    position: relative;
   }
 }
 .cabecalho--aberto .cabecalho__menu-icone {
@@ -383,6 +384,32 @@ section {
 }
 .cabecalho--aberto .cabecalho__menu-x {
   display: block;
+}
+.cabecalho--aberto .cabecalho__navegacao {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  min-width: 100%;
+}
+.cabecalho--aberto .cabecalho__lista {
+  flex-flow: column;
+  gap: 0;
+}
+.cabecalho--aberto .cabecalho__item-lista {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  border-top: 1px solid #b0b0b0;
+  padding: 2rem;
+}
+.cabecalho--aberto .cabecalho__item-lista::after {
+  content: ">";
+  font-weight: 700;
+  transform: rotate(90deg);
 }
 .cabecalho__container {
   display: flex;

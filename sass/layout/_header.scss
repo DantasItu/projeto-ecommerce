@@ -10,6 +10,7 @@
 
   @include respond(medium) {
     padding: 0 3.12rem;
+    position: relative;
   }
 
   &--aberto {
@@ -20,6 +21,30 @@
 
       &-x {
         display: block;
+      }
+    }
+
+    & .cabecalho__navegacao {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: $cor-branca;
+      min-width: 100%;
+    }
+    & .cabecalho__lista {
+      flex-flow: column;
+      gap: 0;
+    }
+    & .cabecalho__item-lista {
+      @include flex($just: space-between);
+      border-top: 1px solid $cor-cinza-mais-claro;
+      padding: 2rem;
+
+      &::after {
+        content: ">";
+        font-weight: 700;
+        transform: rotate(90deg);
       }
     }
   }
