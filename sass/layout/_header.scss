@@ -37,15 +37,44 @@
       gap: 0;
     }
     & .cabecalho__item-lista {
-      @include flex($just: space-between);
-      border-top: 1px solid $cor-cinza-mais-claro;
-      padding: 2rem;
+      @include flex($just: space-between, $align: start, $flow: column);
+      border-top: 1px solid $cor-cinza-muito-claro;
+      padding: 2rem 0 0 0;
+      cursor: pointer;
+    }
 
+    & .cabecalho__expansao-tipo {
+      position: static;
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: none;
+      z-index: 1;
+      background-color: $cor-branco-escuro;
+      width: 100%;
+      border-top: 1px solid $cor-cinza-muito-claro;
+    }
+
+    & .cabecalho__link {
+      @include flex($just: space-between, $align: center);
+      width: 100%;
+      border-width: 0;
+      padding: 0 2rem 2rem 2rem;
       &::after {
-        content: ">";
-        font-weight: 700;
+        content: "\276f";
         transform: rotate(90deg);
       }
+
+      &--tipo {
+        &::after {
+          content: "";
+        }
+      }
+    }
+
+    & .cabecalho__img-link {
+      display: none;
     }
   }
 
