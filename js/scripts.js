@@ -38,7 +38,16 @@ setTimeout(function () {
 // script fechar e abrir menu
 var elemCabecalhoMenu = document.querySelector(".cabecalho__menu");
 var elemCabecalho = document.querySelector(".cabecalho");
+var elemsItemLista = document.querySelectorAll(".cabecalho__item-lista");
 
 elemCabecalhoMenu.addEventListener("click", function () {
   elemCabecalho.classList.toggle("cabecalho--aberto");
+
+  elemsItemLista.forEach(function (ele) {
+    ele.addEventListener("click", function () {
+      ele.classList.toggle("cabecalho__item-lista--aberto");
+    });
+
+    ele.querySelector(".cabecalho__link").href = "javaScript: Void(0)";
+  });
 });

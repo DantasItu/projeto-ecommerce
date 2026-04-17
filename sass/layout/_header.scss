@@ -33,19 +33,35 @@
       min-width: 100%;
     }
     & .cabecalho__lista {
-      flex-flow: column;
+      flex-direction: column;
       gap: 0;
+
+      &--tipo li {
+        &:last-child a {
+          padding-bottom: 0;
+        }
+      }
     }
     & .cabecalho__item-lista {
       @include flex($just: space-between, $align: start, $flow: column);
       border-top: 1px solid $cor-cinza-muito-claro;
       padding: 2rem 0 0 0;
       cursor: pointer;
+
+      &--aberto {
+        & .cabecalho__expansao-tipo {
+          display: flex;
+
+          &:hover {
+            display: flex;
+          }
+        }
+      }
     }
 
     & .cabecalho__expansao-tipo {
       position: static;
-      display: flex;
+      display: none;
       opacity: 1;
       visibility: visible;
       transform: none;
@@ -54,21 +70,34 @@
       background-color: $cor-branco-escuro;
       width: 100%;
       border-top: 1px solid $cor-cinza-muito-claro;
+      padding: 2rem 4rem;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     & .cabecalho__link {
       @include flex($just: space-between, $align: center);
-      width: 100%;
+
       border-width: 0;
-      padding: 0 2rem 2rem 2rem;
+      width: 100%;
+      padding-right: 4rem;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+
       &::after {
         content: "\276f";
         transform: rotate(90deg);
       }
 
       &--tipo {
+        padding-left: 0;
+        margin-bottom: 2rem;
+        margin-top: 0;
         &::after {
           content: "";
+        }
+        &:hover {
+          text-decoration: none;
         }
       }
     }
