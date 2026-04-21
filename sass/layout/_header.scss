@@ -10,7 +10,7 @@
 
   @include respond(medium) {
     padding: 0 3.12rem;
-    position: relative;
+    position: sticky;
   }
 
   &--aberto {
@@ -25,25 +25,12 @@
     }
 
     & .cabecalho__navegacao {
-      display: flex;
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background-color: $cor-branca;
-      min-width: 100%;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
     }
-    & .cabecalho__lista {
-      flex-direction: column;
-      gap: 0;
 
-      &--tipo li {
-        &:last-child a {
-          padding-bottom: 0;
-        }
-      }
-    }
     & .cabecalho__item-lista {
-      @include flex($just: space-between, $align: start, $flow: column);
+      @include flex($just: start, $align: start, $flow: column);
       border-top: 1px solid $cor-cinza-muito-claro;
       padding: 2rem 0 0 0;
       cursor: pointer;
@@ -73,33 +60,6 @@
       padding: 2rem 4rem;
       flex-direction: column;
       gap: 1rem;
-    }
-
-    & .cabecalho__link {
-      @include flex($just: space-between, $align: center);
-
-      border-width: 0;
-      width: 100%;
-      padding-right: 4rem;
-      margin-bottom: 2rem;
-      margin-left: 2rem;
-
-      &::after {
-        content: "\276f";
-        transform: rotate(90deg);
-      }
-
-      &--tipo {
-        padding-left: 0;
-        margin-bottom: 2rem;
-        margin-top: 0;
-        &::after {
-          content: "";
-        }
-        &:hover {
-          text-decoration: none;
-        }
-      }
     }
 
     & .cabecalho__img-link {
@@ -148,7 +108,18 @@
     width: 100%;
     max-width: 81rem;
     @include respond(medium) {
-      display: none;
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: $cor-branca;
+      min-width: 100%;
+      max-height: calc(100vh - 75px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 100vh;
+      transform: translateX(-170%);
+      transition: transform 0.4s ease-in-out;
     }
   }
 
@@ -160,6 +131,17 @@
     &--tipo {
       @include flex($flow: column, $gap: 0.42rem);
       width: auto;
+    }
+
+    @include respond(medium) {
+      flex-direction: column;
+      gap: 0;
+
+      &--tipo li {
+        &:last-child a {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 
@@ -224,6 +206,33 @@
       text-transform: none;
       font-weight: 400;
       border-bottom: none;
+    }
+
+    @include respond(medium) {
+      @include flex($just: space-between, $align: center);
+
+      border-width: 0;
+      width: 100%;
+      padding-right: 4rem;
+      margin-bottom: 2rem;
+      margin-left: 2rem;
+
+      &::after {
+        content: "\276f";
+        transform: rotate(90deg);
+      }
+
+      &--tipo {
+        padding-left: 0;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        &::after {
+          content: "";
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 
