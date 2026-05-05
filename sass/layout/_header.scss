@@ -29,23 +29,6 @@
       transition: transform 0.5s ease-in-out;
     }
 
-    & .cabecalho__item-lista {
-      @include flex($just: start, $align: start, $flow: column);
-      border-top: 1px solid $cor-cinza-muito-claro;
-      padding: 2rem 0 0 0;
-      cursor: pointer;
-
-      &--aberto {
-        & .cabecalho__expansao-tipo {
-          display: flex;
-
-          &:hover {
-            display: flex;
-          }
-        }
-      }
-    }
-
     & .cabecalho__expansao-tipo {
       position: static;
       display: none;
@@ -68,7 +51,7 @@
   }
 
   &__container {
-    @include flex($align: center, $just: space-between, $gap: 1.6rem);
+    @include flex($align: center, $just: start, $gap: 3.66vw);
     width: 100%;
 
     @include respond(medium) {
@@ -246,6 +229,23 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+      }
+    }
+
+    @include respond(medium) {
+      @include flex($just: start, $align: start, $flow: column);
+      border-top: 1px solid $cor-cinza-muito-claro;
+      padding: 2rem 0 0 0;
+      cursor: pointer;
+
+      &--aberto {
+        & .cabecalho__expansao-tipo {
+          display: flex;
+
+          &:hover {
+            display: flex;
+          }
+        }
       }
     }
   }
