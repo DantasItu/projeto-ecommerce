@@ -135,6 +135,11 @@ section {
     gap: 3.12rem;
   }
 }
+@media (max-width: 59.375em) {
+  .rodape__app-nwesletter {
+    flex-flow: column;
+  }
+}
 .rodape__logo {
   min-width: 1.8rem;
   height: 2.3rem;
@@ -162,6 +167,12 @@ section {
   max-width: 136.6rem;
   width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 59.375em) {
+  .rodape__container {
+    flex-flow: column;
+    align-items: center;
+  }
 }
 .rodape__container-app {
   max-width: 50rem;
@@ -197,6 +208,11 @@ section {
   align-items: stretch;
   justify-content: space-between;
   gap: 1.6rem;
+}
+@media (max-width: 59.375em) {
+  .rodape__informacoes {
+    justify-content: center;
+  }
 }
 .rodape__secao-informacoes {
   padding: 3.12rem 2rem;
