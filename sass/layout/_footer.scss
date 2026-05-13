@@ -39,6 +39,25 @@
     @include flex($gap: 1rem, $align: center);
   }
 
+  &__app {
+    @include respond(medium) {
+      justify-content: center;
+    }
+    &--coluna {
+      @include respond(medium) {
+        flex-flow: column;
+        text-align: center;
+      }
+    }
+  }
+
+  &__newsletter {
+    @include respond(medium) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
   &__container {
     @include flex($gap: 1.6rem, $just: space-between);
     max-width: 136.6rem;
@@ -79,6 +98,7 @@
     @include flex($gap: 1.6rem, $just: space-between);
     @include respond(medium) {
       justify-content: center;
+      max-width: none;
     }
   }
 
@@ -125,6 +145,9 @@
     @include respond(big) {
       max-width: 35rem;
     }
+    @include respond(medium) {
+      text-align: center;
+    }
   }
   &__ancoras {
     @include flex($just: space-between, $gap: 1rem, $wrap: wrap, $align: start);
@@ -159,6 +182,11 @@
       opacity: 1;
       filter: none;
     }
+
+    @include respond(medium) {
+      filter: none;
+      opacity: 1;
+    }
   }
 
   &__diferenciais {
@@ -185,10 +213,21 @@
   &__certificacoes {
     @include flex($just: space-between, $gap: 2rem);
     max-width: 100%;
+    @include respond(medium) {
+      &:nth-child(2) {
+        order: -1;
+        width: 100%;
+      }
+    }
   }
 
   &__certificacao {
     @include flex($gap: 1rem, $flow: column);
+
+    @include respond(medium) {
+      text-align: center;
+    }
+
     &-titulo {
       font-size: 1.6rem;
       font-weight: 700;

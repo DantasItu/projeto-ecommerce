@@ -15,6 +15,11 @@ html {
     font-size: 56.25%;
   }
 }
+@media (max-width: 30em) {
+  html {
+    font-size: 37.5%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -93,6 +98,11 @@ section {
   gap: 1.02rem;
   width: 100%;
 }
+@media (max-width: 59.375em) {
+  .formulario {
+    flex-flow: column;
+  }
+}
 .formulario__input {
   font-family: inherit;
   padding: 1rem;
@@ -158,6 +168,23 @@ section {
   justify-content: start;
   gap: 1rem;
 }
+@media (max-width: 59.375em) {
+  .rodape__app {
+    justify-content: center;
+  }
+}
+@media (max-width: 59.375em) {
+  .rodape__app--coluna {
+    flex-flow: column;
+    text-align: center;
+  }
+}
+@media (max-width: 59.375em) {
+  .rodape__newsletter {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .rodape__container {
   display: flex;
   flex-flow: row nowrap;
@@ -212,6 +239,7 @@ section {
 @media (max-width: 59.375em) {
   .rodape__informacoes {
     justify-content: center;
+    max-width: none;
   }
 }
 .rodape__secao-informacoes {
@@ -269,6 +297,11 @@ section {
     max-width: 35rem;
   }
 }
+@media (max-width: 59.375em) {
+  .rodape__atendimento {
+    text-align: center;
+  }
+}
 .rodape__ancoras {
   display: flex;
   flex-flow: row wrap;
@@ -308,6 +341,12 @@ section {
   opacity: 1;
   filter: none;
 }
+@media (max-width: 59.375em) {
+  .rodape__rede {
+    filter: none;
+    opacity: 1;
+  }
+}
 .rodape__diferenciais {
   display: flex;
   flex-flow: row nowrap;
@@ -342,12 +381,23 @@ section {
   gap: 2rem;
   max-width: 100%;
 }
+@media (max-width: 59.375em) {
+  .rodape__certificacoes:nth-child(2) {
+    order: -1;
+    width: 100%;
+  }
+}
 .rodape__certificacao {
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
   justify-content: start;
   gap: 1rem;
+}
+@media (max-width: 59.375em) {
+  .rodape__certificacao {
+    text-align: center;
+  }
 }
 .rodape__certificacao-titulo {
   font-size: 1.6rem;
@@ -762,6 +812,11 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 0 1rem;
+}
+@media (max-width: 30em) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
