@@ -51,3 +51,11 @@ elemCabecalhoMenu.addEventListener("click", function () {
     ele.querySelector(".cabecalho__link").href = "javaScript: Void(0)";
   });
 });
+
+// abrir e fechar menu perfil
+var eleInfoPerfil = document.querySelector(".cabecalho__informacoes-perfil");
+var eleIconLogin = document.querySelector(".cabecalho__icone-login");
+
+eleIconLogin.addEventListener("click", function () {
+  eleInfoPerfil.classList.toggle("cabecalho__informacoes-perfil--aberto");
+});
