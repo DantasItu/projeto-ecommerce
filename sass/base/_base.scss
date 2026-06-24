@@ -33,6 +33,6 @@ img {
   display: block;
 }
 
-section {
+.principal {
   @include flex($flow: column, $gap: 2.5rem);
 }

@@ -9,6 +9,7 @@
 // components
 @use "components/carrossel";
 @use "components/formulario";
+@use "components/slider";
 
 // layoura
 @use "layout/footer";
@@ -16,3 +17,4 @@
 
 // pages
 @use "pages/home";
+@use "pages/loja";
