@@ -1,7 +1,7 @@
 @use "../abstracts/auxiliares" as *;
 
 .menu {
-  @include flex($flow: column, $gap: 1.28rem);
+  @include flex($flow: column, $gap: 1.5rem);
   padding: 0 2rem;
   width: 31rem;
 
@@ -10,7 +10,8 @@
   }
 
   &__preco {
-    @include flex($flow: column, $gap: 1.28rem);
+    border-bottom: 1px solid $cor-cinza-muito-claro;
+    padding-bottom: 2rem;
   }
 
   &__titulo,
@@ -28,7 +29,7 @@
   }
 
   &__sub-titulo {
-    font-size: 1.6rem;
+    font-size: 1.33rem;
   }
 
   &__button {
@@ -43,5 +44,52 @@
 
   &__controles {
     @include flex($gap: 0.6rem);
+  }
+
+  &__expancivel {
+    border-bottom: 1px solid $cor-cinza-muito-claro;
+    padding-bottom: 1rem;
+
+    &--aberto {
+      .menu__expancivel-conteudo {
+        max-height: 100rem;
+        transition: max-height ease-in-out 0.5s;
+      }
+    }
+    &-cabecalho {
+      @include flex($just: space-between, $align: center, $gap: 0.4rem);
+      padding-right: 1rem;
+
+      cursor: pointer;
+
+      &::after {
+        content: "\276f";
+        transform: rotate(90deg);
+      }
+    }
+    &-conteudo {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height ease-in-out 0.5s;
+    }
+  }
+
+  &__cores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  &__cor {
+    @include flex($align: center, $gap: 0.4rem);
+    font-size: 1.33rem;
+
+    &-quadrado {
+      width: 2.8rem;
+      height: 2.8rem;
+      background-color: blue;
+      border-radius: 4px;
+    }
   }
 }
