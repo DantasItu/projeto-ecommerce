@@ -4,6 +4,7 @@
   @include flex($flow: column, $gap: 1.5rem);
   padding: 0 2rem;
   width: 31rem;
+  max-height: 60rem;
 
   &__cabecalho {
     @include flex($align: center, $gap: 0.6rem);
@@ -91,5 +92,52 @@
       background-color: blue;
       border-radius: 4px;
     }
+  }
+
+  &__tamanhos {
+    @include flex($align: center, $gap: 1rem, $wrap: wrap);
+  }
+
+  &__tamanho {
+    @include flex($align: center, $gap: 0.4rem);
+    font-size: 1.33rem;
+
+    &-quadrado {
+      @include flex($align: center, $just: center);
+      width: 2.8rem;
+      height: 2.8rem;
+      border: solid 1px $cor-preto;
+      font-size: 0.92rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+  }
+
+  &__categorias {
+    @include flex($gap: 1rem, $flow: column);
+    margin-top: 2rem;
+  }
+
+  &__categoria {
+    @include flex($align: center, $gap: 0.4rem);
+    font-size: 1.33rem;
+
+    &-quadrado {
+      @include flex($align: center, $just: center);
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      border: solid 1px $cor-preto;
+      font-size: 0.92rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
   }
 }
